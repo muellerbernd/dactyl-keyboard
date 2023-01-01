@@ -76,7 +76,7 @@ else:
 ####################################################
 
 
-debug_exports = False 
+debug_exports = False
 debug_trace = False
 
 def debugprint(info):
@@ -935,7 +935,7 @@ def thumb_connectors(side='right', style_override=None):
         return minidox_thumb_connectors()
     elif _thumb_style == "CARBONFET":
         return carbonfet_thumb_connectors()
-      
+
     elif "TRACKBALL" in _thumb_style:
         if (side == ball_side or ball_side == 'both'):
             if _thumb_style == "TRACKBALL_ORBYL":
@@ -944,7 +944,7 @@ def thumb_connectors(side='right', style_override=None):
                 return tbcj_thumb_connectors()
         else:
             return thumb_connectors(side, style_override=other_thumb)
-          
+
     else:
         return default_thumb_connectors()
 
@@ -2062,7 +2062,7 @@ def tbcj_thumb_layout(shape):
 
 #def oct_corner(i, radius, shape):
 #    i = (i+1)%8
-#    
+#
 #    points_x = [1, 2, 2, 1, -1, -2, -2, -1]
 #    points_y = [2, 1, -1, -2, -2, -1, 1, 2]
 #
@@ -2075,7 +2075,7 @@ def oct_corner(i, diameter, shape):
 
     r = radius
     m = radius * math.tan(math.pi / 8)
-    
+
     points_x = [m, r, r, m, -m, -r, -r, -m]
     points_y = [r, m, -m, -r, -r, -m, m, r]
 
@@ -2653,7 +2653,7 @@ def thumb_connection(side='right', style_override=None, skeleton=False):
         return minidox_thumb_connection(side=side, skeleton=skeleton)
     elif _thumb_style == "CARBONFET":
         return carbonfet_thumb_connection(side=side, skeleton=skeleton)
-      
+
     elif "TRACKBALL" in _thumb_style:
         if (side == ball_side or ball_side == 'both'):
             if _thumb_style == "TRACKBALL_ORBYL":
@@ -3943,8 +3943,8 @@ def screw_insert_all_shapes(bottom_radius, top_radius, height, offset=0, side='r
     shape = (
         translate(screw_insert(0, 0, bottom_radius, top_radius, height, side=side), (0, 0, offset)),
         translate(screw_insert(0, cornerrow, bottom_radius, top_radius, height, side=side), (0, left_wall_lower_y_offset, offset)),
-        translate(screw_insert(3, lastrow, bottom_radius, top_radius, height, side=side), (0, 0, offset)),
-        translate(screw_insert(3, 0, bottom_radius, top_radius, height, side=side), (0,0, offset)),
+        # translate(screw_insert(3, lastrow, bottom_radius, top_radius, height, side=side), (0, 0, offset)),
+        # translate(screw_insert(3, 0, bottom_radius, top_radius, height, side=side), (0,0, offset)),
         translate(screw_insert(lastcol, 0, bottom_radius, top_radius, height, side=side), (0, 0, offset)),
         translate(screw_insert(lastcol, cornerrow, bottom_radius, top_radius, height, side=side), (0, 0, offset)),
         # translate(screw_insert_thumb(bottom_radius, top_radius, height), (0, 0, offset)),
