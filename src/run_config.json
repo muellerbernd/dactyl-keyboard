@@ -1,5 +1,5 @@
 {
-    "ENGINE": "solid",
+    "ENGINE": "cadquery",
     "save_dir": ".",
     "config_name": "DM",
     "show_caps": false,
@@ -21,7 +21,7 @@
         -3,
         2
     ],
-    "keyboard_z_offset": 7,
+    "keyboard_z_offset": 16,
     "extra_width": 2.5,
     "extra_height": 1.0,
     "web_thickness": 5.1,
@@ -502,7 +502,7 @@
         22
     ],
     "pcb_screw_y_offset": -2,
-    "screw_hole_diameter": 3,
+    "screw_hole_diameter": 4,
     "base_thickness": 3.0,
     "base_offset": 3.0,
     "base_rim_thickness": 5.0,
